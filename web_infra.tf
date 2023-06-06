@@ -3,6 +3,7 @@ resource "aws_key_pair" "web_admin" {
   public_key = file("~/.ssh/web_admin.pub")
 }
 
+#thisis creating security group rule in default
 resource "aws_security_group" "ssh" {
   name = "allow_ssh_from_all"
   description = "Allow SSH port from all"
